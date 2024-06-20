@@ -13,7 +13,7 @@ The recommendation system works by analyzing user-item interactions (ratings) to
 1. **User-Item Interaction Matrix:**
    - The system starts with a matrix where rows represent users and columns represent movies. The entries in this matrix are the ratings given by users to movies.
 
-   \[ 
+   \[
    R = \begin{bmatrix}
    5 & 3 & 0 \\
    4 & 0 & 0 \\
@@ -24,7 +24,7 @@ The recommendation system works by analyzing user-item interactions (ratings) to
 2. **Matrix Factorization:**
    - Using SVD, the interaction matrix \( R \) is decomposed into three matrices \( U \), \( \Sigma \), and \( V^T \):
 
-   \[ 
+   \[
    R \approx U \Sigma V^T 
    \]
 
