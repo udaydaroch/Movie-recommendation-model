@@ -20,26 +20,24 @@ $$ \begin{bmatrix}
    \end{bmatrix} $$
 
 2. **Matrix Factorization:**
-   - Using SVD, the interaction matrix \( R \) is decomposed into three matrices \( U \), \( \Sigma \), and \( V^T \):
+   - Using SVD, the interaction matrix `R` is decomposed into three matrices `U`, `Σ`, and `V^T`:
 
    \[
    R \approx U \Sigma V^T 
    \]
 
-   - \( U \): User matrix representing users in the latent feature space.
-   - \( \Sigma \): Diagonal matrix with singular values representing the importance of each latent feature.
-   - \( V^T \): Movie matrix representing movies in the latent feature space.
+   - ( `U`): User matrix representing users in the latent feature space.
+   - (`Σ`): Diagonal matrix with singular values representing the importance of each latent feature.
+   - (`V^T`): Movie matrix representing movies in the latent feature space.
 
 3. **Latent Features:**
-   - **User Latent Features (U):** Capture user preferences.
-   - **Movie Latent Features (V^T):** Capture movie characteristics.
+   - **User Latent Features (`U`):** Capture user preferences.
+   - **Movie Latent Features (`V^T`):** Capture movie characteristics.
 
 4. **Prediction:**
    - The predicted rating for a user and a movie is computed by the dot product of the user's and movie's latent feature vectors.
 
-   \[
-   \hat{r}_{ui} = U_u \cdot V_i
-   \]
+   ŕ_ui = U_u ⋅ V_i
 
 5. **Model Training:**
    - The model is trained on the existing ratings data to learn these latent features. The Surprise library is used for this purpose.
